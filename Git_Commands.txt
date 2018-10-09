@@ -43,7 +43,6 @@ Common Workflow:
   git stash apply
   git stash apply stash@{2}
  
-
 Revert the previous commit:
   git revert HEAD
   git commit
@@ -116,5 +115,3 @@ Delete a branch:
   git add .
   git commit -m "Update"
   git push -f origin master
-
-gsgssggs
