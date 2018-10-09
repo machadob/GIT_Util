@@ -1,0 +1,79 @@
+Alias:
+  git config alias.st status
+  
+Common Workflow:
+git add .  (Add all files to staging area)
+git commit -m "comment" (commit changes in staging to the local repo)
+
+Revert the previous commit:
+  git revert HEAD
+  git commit
+  
+Revert the changes from previous 3 commits without making commit:
+  git revert --no-commit HEAD~3..
+  
+Amend:
+  git commit --amend
+  git commit --amend --no-edit
+  git commit --amend -m "New commit message"
+
+Rebase:
+git rebase master // Rebase the current branch onto master
+git rebase --continue //Continue Rebase
+git rebase --abort  //Abort Rebase
+
+Stash:
+  git stash
+  git stash save "stash name"
+  git stash list
+  git stash pop
+  git stash apply
+  git stash apply stash@{2}
+
+Delete remote tags:
+  git push --delete origin tagname
+  git push origin :tagname
+  
+Push tag to remote:
+  git push origin tagname
+  
+Rename tag:
+  git tag new old
+  git tag -d old
+  git push origin :refs/tags/old
+  git push --tags
+  
+List all remote:
+ git remote
+ 
+Create the branch on your local machine and switch in this branch:
+  git checkout -b branch_name
+Create branch from commit:
+  git branch branch_name sha1_of_commit
+  
+Push the branch to remote:
+  git push origin branch_name
+  
+Rename other branch:
+  git branch -m old new
+Rename current branch:
+  git branch -m new
+  
+Rename remote branch:
+  git branch -m old new               # Rename branch locally    
+  git push origin :old                 # Delete the old branch    
+  git push --set-upstream origin new   # Push the new branch, set local branch to track the new remote
+  
+Delete a branch:
+  git branch -D the_local_branch
+  git push origin :the_remote_branch
+  
+ Undo last commit:
+  git reset --hard HEAD~1
+  
+ Squash last n commits into one commit:
+  git rebase -i HEAD~5
+  git reset --soft HEAD~5
+  git add .
+  git commit -m "Update"
+  git push -f origin master
