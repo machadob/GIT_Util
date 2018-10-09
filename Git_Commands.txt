@@ -1,5 +1,6 @@
 Alias:
   git config alias.st status
+  git config alias.ln "log --pretty=oneline --graph --decorate"
   
 Common Workflow:
 git add .  (Add all files to staging area)
