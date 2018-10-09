@@ -26,7 +26,6 @@ Common Workflow:
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
-  git fetch (Fetch the latest changes and branches from remote)
   git fetch (Fetch the latest changes and branches from remote origin)
   git fetch <remote> (Fetch all of the branches from the repository)
   git fetch <remote> <branch> (Same as the above command, but only fetch the specified branch.)
