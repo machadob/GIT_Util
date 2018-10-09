@@ -20,8 +20,8 @@ Common Workflow:
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git fetch (Fetch the latest changes and branches from remote)
+  git fetch (Fetch the latest changes and branches from remote origin)
   git pull  (Fetch the latest changes from remote and merge into the current branch)
-  
   git rebase master // Rebase the current branch onto master
   git revert HEAD (Revert the previous commit)
   git stash
