@@ -21,7 +21,13 @@ Common Workflow:
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git fetch (Fetch the latest changes and branches from remote)
   git fetch (Fetch the latest changes and branches from remote origin)
-  git pull  (Fetch the latest changes from remote and merge into the current branch)
+  git fetch <remote> (Fetch all of the branches from the repository)
+  git fetch <remote> <branch> (Same as the above command, but only fetch the specified branch.)
+  git fetch --all (A power move which fetches all registered remotes and their branches)
+  git fetch --dry-run (The --dry-run option will perform a demo run of the command.)
+  git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
+  git pull origin master
+  git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
   git rebase master // Rebase the current branch onto master
   git revert HEAD (Revert the previous commit)
   git stash
