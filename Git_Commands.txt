@@ -3,8 +3,14 @@ Alias:
   git config alias.ln "log --pretty=oneline --graph --decorate"
   
 Common Workflow:
+git clone URL
 git add .  (Add all files to staging area)
 git commit -m "comment" (commit changes in staging to the local repo)
+git remote (List all remotes)
+git checkout -b branch_name  (Create local branch)
+git branch branch_name sha1_of_commit (Create branch from a commit)
+git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
+git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
 
 Revert the previous commit:
   git revert HEAD
