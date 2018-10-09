@@ -12,6 +12,7 @@ Common Workflow:
   git checkout . (Abort changes in working area for all files)
   git reset -- foo.txt (Abort changes in staging area for file foo.txt)
   git reset . (Abort changes for all files in the staging area)
+  git reset --hard HEAD~1 (Undo last commit)
   git remote (List all remotes)
   git checkout -b branch_name  (Create local branch)
   git branch branch_name sha1_of_commit (Create branch from a commit)
