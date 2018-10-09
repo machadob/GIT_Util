@@ -13,9 +13,10 @@ Common Workflow:
   git reset . (Abort changes for all files in the staging area)
   git remote (List all remotes)
   git checkout -b branch_name  (Create local branch)
-  git checkout mybranch (switch to mybranch)
   git branch branch_name sha1_of_commit (Create branch from a commit)
-  git merge 
+  git checkout mybranch (switch to mybranch)
+  git checkout origin/master (Checkout the remote tracking branch on the local machine)
+  git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git fetch (Fetch the latest changes and branches from remote)
@@ -103,4 +104,4 @@ Delete a branch:
   git add .
   git commit -m "Update"
   git push -f origin master
-delete thsi
+
