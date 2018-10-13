@@ -84,6 +84,9 @@ Rename tag:
 List all remote:
  git remote
  
+Add a additional remote reposirory:
+  git remote add myorigin git@github.com:user/repo.git
+ 
 Create the branch on your local machine and switch in this branch:
   git checkout -b branch_name
 Create branch from commit:
