@@ -19,6 +19,7 @@ Common Workflow:
   git checkout mybranch (switch to mybranch)
   git checkout origin/master (Checkout the remote tracking branch on the local machine)
   git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
+  git merge puru --allow-unrelated-histories (merge unrelated branches with different histories)
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
@@ -34,6 +35,7 @@ Common Workflow:
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
   git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
+  git pull origin master --allow-unrelated-histories (
   git rebase master // Rebase the current branch onto master
   git revert HEAD (Revert the previous commit)
   git stash
