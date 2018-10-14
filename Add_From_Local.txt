@@ -7,3 +7,12 @@ Following are the instruction to add a local project to github.
 4) Commit the files to local repo using "git commit -m"initial commit""
 5) Add the remote repo using "git remote add origin <github repository UR>"
 6) Push the local changes to the new github repo using "git push -u origin master"
+
+
+for e.g. to push a project to the ABC repo on git hub
+cd ABC
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/machadob/ABC.git
+git push -u origin master
