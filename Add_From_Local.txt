@@ -1,9 +1,9 @@
 
 Following are the instruction to add a local project to github.
 
-Create a new empty repository in github.
-Add the local root folder to local git repo using "git init"
-Add all files to the local repo using "git add ."
-Commit the files to local repo using "git commit -m"initial commit""
-Add the remote repo using "git remote add origin <github repository UR>"
-Push the local changes to the new github repo using "git push -u origin master"
+1) Create a new empty repository in github.
+2) Add the local root folder to local git repo using "git init"
+3) Add all files to the local repo using "git add ."
+4) Commit the files to local repo using "git commit -m"initial commit""
+5) Add the remote repo using "git remote add origin <github repository UR>"
+6) Push the local changes to the new github repo using "git push -u origin master"
