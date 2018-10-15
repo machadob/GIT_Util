@@ -21,6 +21,7 @@ Common Workflow:
   git checkout origin/master (Checkout the remote tracking branch on the local machine)
   git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
   git merge puru --allow-unrelated-histories (merge unrelated branches with different histories)
+  git merge --abort  (Abort a merge)
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
