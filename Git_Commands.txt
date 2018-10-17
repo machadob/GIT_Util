@@ -1,7 +1,8 @@
 Alias:
   git config alias.st status
-  git config alias.ln "log --pretty=oneline --graph --decorate"
+  git config alias.ln "log --pretty=oneline --graph --decorate --all"
   git config alias.st "status -s"
+  git log --oneline --decorate --all --graph
   
 Common Workflow:
   git clone URL
