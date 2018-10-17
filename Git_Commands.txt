@@ -47,6 +47,7 @@ Common Workflow:
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
   git rebase master // Rebase the current branch onto master
+  
   git stash
   git stash save "stash name"
   git stash list
