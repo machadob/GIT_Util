@@ -55,6 +55,7 @@ Common Workflow:
   git stash apply
   git stash apply stash@{2}
   git stash drop stash@{2}
+  
   git difftool (Launch the git diff tool)
   git diff myfile.txt (Diff file in working dir and repo)
   git diff --cached myfile.txt (Diff file in staging and repo)
