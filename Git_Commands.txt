@@ -12,6 +12,8 @@ Common Workflow:
   git checkout . (Abort changes in working area for all files)
   git reset -- foo.txt (Abort changes in staging area for file foo.txt)
   git reset . (Abort changes for all files in the staging area)
+  git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
+  git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in work dir)
   git reset --hard HEAD~1 (Undo last commit)
   git remote (List all remotes)
   git checkout -b branch_name  (Create local branch)
@@ -44,6 +46,9 @@ Common Workflow:
   git stash pop
   git stash apply
   git stash apply stash@{2}
+  git stash drop stash@{2}
+  git difftool (Launch the git diff tool)
+
  
 Revert the previous commit:
   git revert HEAD
