@@ -12,10 +12,13 @@ Common Workflow:
   git checkout . (Abort changes in working area for all files)
   git reset -- foo.txt (Abort changes in staging area for file foo.txt)
   git reset . (Abort changes for all files in the staging area)
-  git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
-  git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in workdir)
   git reset --hard HEAD~1 (Undo last commit)
   git reset --hard 0d1d7fc32 (Go to a previous commit. The later commits are lost)
+  git revert HEAD (Revert the previous commit)
+
+  git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
+  git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in workdir)
+
   git remote (List all remotes)
   git config --get remote.origin.url (Get the remote URL from which this repo was cloned)
   git checkout -b branch_name  (Create local branch)
@@ -24,27 +27,26 @@ Common Workflow:
   git checkout origin/master (Checkout the remote tracking branch on the local machine)
   git checkout 0d1d7fc32 (Checkout specific commit. Will be headless)
   git checkout -b mybranch 0d1d7fc32 (Create a branch mybranch on commit 0d1d7fc32 and checkout the branch) 
-  git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
-  git merge mybranch --allow-unrelated-histories (merge unrelated branche mybranch with different history)
-  git merge --abort  (Abort a merge)
+  git branch -a (List all remote branches)
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
-  git branch -a (List all remote branches)
-  git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
-  git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
-  git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
   git fetch (Fetch the latest changes and branches from remote origin)
   git fetch <remote> (Fetch all of the branches from the repository)
   git fetch <remote> <branch> (Same as the above command, but only fetch the specified branch.)
   git fetch --all (A power move which fetches all registered remotes and their branches)
   git fetch --dry-run (The --dry-run option will perform a demo run of the command.)
+  git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
+  git merge mybranch --allow-unrelated-histories (merge unrelated branche mybranch with different history)
+  git merge --abort  (Abort a merge)
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
   git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
   git pull origin master --allow-unrelated-histories (
+  git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
+  git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
+  git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
   git rebase master // Rebase the current branch onto master
-  git revert HEAD (Revert the previous commit)
   git stash
   git stash save "stash name"
   git stash list
