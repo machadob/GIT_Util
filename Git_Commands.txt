@@ -3,6 +3,7 @@ Alias:
   git config alias.ln "log --pretty=oneline --graph --decorate --all"
   git config alias.st "status -s"
   git log --oneline --decorate --all --graph
+  git remote show origin (Find the remote repository URLs)
   
 Common Workflow:
   git clone URL
