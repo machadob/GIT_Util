@@ -1,6 +1,6 @@
 Alias:
   git config alias.st status
-  git config alias.ln "log --pretty=oneline --graph --decorate --all"
+  git config alias.lg "log --pretty=oneline --graph --decorate --all"
   git config alias.st "status -s"
   git log --oneline --decorate --all --graph
   git remote show origin (Find the remote repository URLs)
