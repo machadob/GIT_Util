@@ -40,6 +40,7 @@ Common Workflow:
   git fetch --dry-run (The --dry-run option will perform a demo run of the command.)
   git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
   git merge mybranch --allow-unrelated-histories (merge unrelated branche mybranch with different history)
+  git merge --no-ff <mybranch> (Merge branch mybranch into current branh without fast forward)
   git merge --abort  (Abort a merge)
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
