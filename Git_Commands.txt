@@ -4,6 +4,8 @@ Alias:
   git config alias.st "status -s"
   git log --oneline --decorate --all --graph
   git remote show origin (Find the remote repository URLs)
+  git remote -v (Get remote repository URL)
+  git remote -vv (Same as above, but verbose)
   
 Common Workflow:
   git clone URL
@@ -48,16 +50,20 @@ Common Workflow:
   git merge --ff-only  <mybranch> (Merge branch mybranch into current branh with fast forward only)
   git merge --no-ff  <mybranch> (Merge branch mybranch into current branh without fast forward)
   git merge --abort  (Abort a merge)
+  git merge --no-commit --no-ff $BRANCH (Do a dry run for a merge)
+  git diff --cached (To examine the staged changes)
   git rebase master // Rebase the current branch onto master
   git rebase master mybranch // Rebase the mybranch branch onto master
   
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
   git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
-  git pull origin master --allow-unrelated-histories (
+  git pull origin master --allow-unrelated-histories (Allow unrelated repo to be pulled)
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
+  git push -u origin <mybranch> (push mybranch to origin)
+  git push --all -u (Push all branches to remote. Use only for private repos)
 
   git stash
   git stash save "stash name"
