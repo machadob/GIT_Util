@@ -11,7 +11,7 @@ Common Workflow:
   git clone URL
   git add .  (Add all files to staging area)
   git commit -m "comment" (Commit changes in staging to the local repo)
-  git commit --amend -m "New commit message" (Ammend the last commit with a new comment)
+  git commit --amend -m "New commit message" (Ammend the last commit with a new comment and/or content)
   git checkout foo.txt (Abort changes in working area for file foo.txt)
   git checkout . (Abort changes in working area for all files)
   git reset -- foo.txt (Abort changes in staging area for file foo.txt)
