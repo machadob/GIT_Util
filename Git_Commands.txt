@@ -33,17 +33,22 @@ Common Workflow:
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
+  
   git fetch (Fetch the latest changes and branches from remote origin)
   git fetch <remote> (Fetch all of the branches from the repository)
   git fetch <remote> <branch> (Same as the above command, but only fetch the specified branch.)
   git fetch --all (A power move which fetches all registered remotes and their branches)
   git fetch --dry-run (The --dry-run option will perform a demo run of the command.)
+  
   git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
   git merge mybranch --allow-unrelated-histories (merge unrelated branche mybranch with different history)
   git merge --ff <mybranch> (Merge branch mybranch into current branh with fast forward)
   git merge --ff-only  <mybranch> (Merge branch mybranch into current branh with fast forward only)
   git merge --no-ff  <mybranch> (Merge branch mybranch into current branh without fast forward)
   git merge --abort  (Abort a merge)
+  git rebase master // Rebase the current branch onto master
+  git rebase master mybranch // Rebase the mybranch branch onto master
+  
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
   git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
@@ -51,9 +56,7 @@ Common Workflow:
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
-  git rebase master // Rebase the current branch onto master
-  git rebase master mybranch // Rebase the mybranch branch onto master
-  
+
   git stash
   git stash save "stash name"
   git stash list
