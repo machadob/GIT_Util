@@ -17,7 +17,6 @@ Common Workflow:
   git reset --hard HEAD~1 (Undo last commit)
   git reset --hard 0d1d7fc32 (Go to a previous commit. The later commits are lost)
   git revert HEAD (Revert the previous commit)
-
   git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
   git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in workdir)
 
@@ -33,6 +32,9 @@ Common Workflow:
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
+  
+  git tag <mytag> (Create tag mytag>
+  git tag -d <mytag> (Delete tag mytag>
   
   git fetch (Fetch the latest changes and branches from remote origin)
   git fetch <remote> (Fetch all of the branches from the repository)
@@ -93,6 +95,7 @@ Stash:
   git stash pop
   git stash apply
   git stash apply stash@{2}
+  git stash drop stash@{2}
 
 Delete remote tags:
   git push --delete origin tagname
