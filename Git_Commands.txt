@@ -18,6 +18,7 @@ Common Workflow:
   git reset . (Abort changes for all files in the staging area)
   git reset --hard HEAD~1 (Undo last commit)
   git reset --hard 0d1d7fc32 (Go to a previous commit. The later commits are lost)
+  git branch -f master 1258f0d0aae (Make a branch, master, point to any commit previous or forwards, do this from diff branch)
   git revert HEAD (Revert the previous commit)
   git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
   git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in workdir)
