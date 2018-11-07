@@ -2,7 +2,8 @@ Alias:
   git config alias.st status
   git config alias.lg "log --pretty=oneline --graph --decorate --all"
   git config alias.st "status -s"
-  git log --oneline --decorate --all --graph
+  git log --oneline --decorate --all --graph (Shows all branches)
+  git log --oneline --decorate --graph --first-parent (Shows only the first parent in the graph)
   git remote show origin (Find the remote repository URLs)
   git remote -v (Get remote repository URL)
   git remote -vv (Same as above, but verbose)
