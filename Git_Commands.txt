@@ -85,6 +85,15 @@ Common Workflow:
   git diff --cached myfile.txt (Diff file in staging and repo)
   git diff branch_1..branch_2 (Diff between two git branches)
  
+Search:
+  git rev-parse <ref> (Use this to look up a SHA1 for a ref)
+  git bisect (Use this to search for a previous working commit.)
+  git log --author=[your git name] (Search commits by author e.g. git log --author=Prem)
+  git log --all --grep='Build 0051' (To search the commit log (across all branches) for the given text)
+    (The --all parameter means to start from every branch and --source means to show which of those branches led 
+     to finding that commit.)
+  git log -S 'hello world' --source --all (Find commits that introduced a string in any branch)
+
 Revert the previous commit:
   git revert HEAD
   git commit
