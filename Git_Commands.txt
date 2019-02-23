@@ -1,30 +1,42 @@
+Git configuration:
+
+vi ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
+To ignore a folder, add the following line to the .gitignore file:
+node_modules/  //This will ignore the folder node_modules and its contents any where it exists in the source tree.
+
+// To create git ignore files for various languages and tools use the following URL:
+https://www.gitignore.io
+
 Alias:
   git config alias.st status
   git config alias.lg "log --pretty=oneline --graph --decorate --all"
   git config alias.st "status -s"
-  git log --oneline --decorate --all --graph (Shows all branches)
-  git log --oneline --decorate --graph --first-parent (Shows only the first parent in the graph)
+  git log --oneline --decorate --all --graph
   git remote show origin (Find the remote repository URLs)
-  git remote -v (Get remote repository URL)
-  git remote -vv (Same as above, but verbose)
+  
+Finding changes:
+git diff --name-only ref1 ref2
+git diff ref1..ref2
+
   
 Common Workflow:
   git clone URL
   git add .  (Add all files to staging area)
   git commit -m "comment" (Commit changes in staging to the local repo)
-  git commit --amend -m "New commit message" (Ammend the last commit with a new comment and/or content)
+  git commit --amend -m "New commit message" (Ammend the last commit with a new comment)
   git checkout foo.txt (Abort changes in working area for file foo.txt)
   git checkout . (Abort changes in working area for all files)
   git reset -- foo.txt (Abort changes in staging area for file foo.txt)
   git reset . (Abort changes for all files in the staging area)
-  git reset --hard HEAD~1 (Undo last commit, other options --soft, --mixed etc.)
+  git reset --hard HEAD~1 (Undo last commit)
   git reset --hard 0d1d7fc32 (Go to a previous commit. The later commits are lost)
-  git reset f116853(SHA-1). (Make the current branch point to any commit; previous or forwards.)
-  git branch -f master 1258f0d0aae (Make a branch, master, point to any commit previous or forwards, do this from diff branch)
   git revert HEAD (Revert the previous commit)
+
   git rm file1.txt followed by  git commit -m "remove file1.txt" (Remove file1.txt from git repo)
   git rm --cached file1.txt followed by git commit -m "remove file1.txt" (Remove file1.txt from git repo, but keep in workdir)
-  
+
   git remote (List all remotes)
   git config --get remote.origin.url (Get the remote URL from which this repo was cloned)
   git checkout -b branch_name  (Create local branch)
@@ -37,41 +49,23 @@ Common Workflow:
   git branch -d <mybranch> (Delete local branch mybranch)
   git branch -D <branch> (Force delete the specified branch, even if it has unmerged changes.)
   git branch -m <mybranch> (Rename the current branch to <mybranch>.)
-  
-  git tag <mytag> (Create tag mytag>
-  git tag -d <mytag> (Delete tag mytag>
-  
   git fetch (Fetch the latest changes and branches from remote origin)
   git fetch <remote> (Fetch all of the branches from the repository)
   git fetch <remote> <branch> (Same as the above command, but only fetch the specified branch.)
   git fetch --all (A power move which fetches all registered remotes and their branches)
   git fetch --dry-run (The --dry-run option will perform a demo run of the command.)
-  
   git merge origin/master (Merge the remote cached branch to the local branch -- fetch changes before merge)
   git merge mybranch --allow-unrelated-histories (merge unrelated branche mybranch with different history)
-  git merge --ff <mybranch> (Merge branch mybranch into current branh with fast forward)
-  git merge --ff-only  <mybranch> (Merge branch mybranch into current branh with fast forward only)
-  git merge --no-ff  <mybranch> (Merge branch mybranch into current branh without fast forward)
   git merge --abort  (Abort a merge)
-  git merge --no-commit --no-ff $BRANCH (Do a dry run for a merge)
-  git diff --cached (To examine the staged changes)
-  git rebase master // Rebase the current branch onto master
-  git rebase master mybranch // Rebase the mybranch branch onto master
-  
   git pull  (git fetch <remote> followed by git merge origin/<current-branch>)
   git pull origin master
   git pull --rebase <remote> (Same as the previous pull but will rebase instead of merge)
-  git pull origin master --allow-unrelated-histories (Allow unrelated repo to be pulled)
+  git pull origin master --allow-unrelated-histories (
   git push <remote-name> <branch-name> (Create remote branch by pushing a local branch)
   git push --set-upstream origin new   (Push the new branch, set local branch to track the new remote)
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
-  git push -u origin <mybranch> (push mybranch to origin)
-  git push --all -u (Push all branches to remote. Use only for private repos)
-
-  git reflog show --all
-  git reflog show otherbranch (For a specific branch)
-  git reflog stash (For a stash)
- 
+  git rebase master // Rebase the current branch onto master
+  
   git stash
   git stash save "stash name"
   git stash list
@@ -83,17 +77,7 @@ Common Workflow:
   git difftool (Launch the git diff tool)
   git diff myfile.txt (Diff file in working dir and repo)
   git diff --cached myfile.txt (Diff file in staging and repo)
-  git diff branch_1..branch_2 (Diff between two git branches)
  
-Search:
-  git rev-parse <ref> (Use this to look up a SHA1 for a ref)
-  git bisect (Use this to search for a previous working commit.)
-  git log --author=[your git name] (Search commits by author e.g. git log --author=Prem)
-  git log --all --grep='Build 0051' (To search the commit log (across all branches) for the given text)
-    (The --all parameter means to start from every branch and --source means to show which of those branches led 
-     to finding that commit.)
-  git log -S 'hello world' --source --all (Find commits that introduced a string in any branch)
-
 Revert the previous commit:
   git revert HEAD
   git commit
@@ -118,7 +102,6 @@ Stash:
   git stash pop
   git stash apply
   git stash apply stash@{2}
-  git stash drop stash@{2}
 
 Delete remote tags:
   git push --delete origin tagname
