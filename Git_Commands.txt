@@ -19,6 +19,10 @@ Alias:
 Finding changes:
   git diff --name-only ref1 ref2
   git diff ref1..ref2
+  -- Following three are equivalent. Commits reachable from B but not from A.
+  git log refA..refB
+  git log ^refA refB
+  git log refB --not refA
 
 Configure Merge/Diff Tools (example with kdiff3):
   git config --global --add merge.tool kdiff3
