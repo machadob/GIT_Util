@@ -17,8 +17,8 @@ Alias:
   git remote show origin (Find the remote repository URLs)
   
 Finding changes:
-git diff --name-only ref1 ref2
-git diff ref1..ref2
+  git diff --name-only ref1 ref2
+  git diff ref1..ref2
 
 Configure Merge/Diff Tools (example with kdiff3):
   git config --global --add merge.tool kdiff3
