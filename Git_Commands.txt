@@ -26,6 +26,10 @@ Finding changes:
   git log refA..refB
   git log ^refA refB
   git log refB --not refA
+  
+  git bisect start
+  git bisect bad
+  git bisect good 0
 
 Configure Merge/Diff Tools (example with kdiff3):
   git config --global --add merge.tool kdiff3
