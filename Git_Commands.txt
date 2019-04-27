@@ -17,6 +17,9 @@ Alias:
   git remote show origin (Find the remote repository URLs)
   
 Finding changes:
+  git merge-base <ref>
+  git rev-parse <ref>
+  git ls-files <options>
   git diff --name-only ref1 ref2
   git diff ref1..ref2
   -- Following three are equivalent. Commits reachable from B but not from A.
