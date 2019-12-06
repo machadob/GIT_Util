@@ -12,7 +12,7 @@ https://www.gitignore.io
 //Paths
 git config --show-origin user.name // Show the path of the config file where user.name is configured
 
-//Config 
+//Display Config value
 git config user.name  // local scope is default
 git config --global user.name // For global scope
 
