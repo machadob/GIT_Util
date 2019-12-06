@@ -9,6 +9,25 @@ node_modules/  //This will ignore the folder node_modules and its contents any w
 // To create git ignore files for various languages and tools use the following URL:
 https://www.gitignore.io
 
+//Paths
+git config --show-origin user.name // Show the path of the config file where user.name is configured
+
+//Config 
+git config user.name  // local scope is default
+git config --global user.name // For global scope
+
+//Unset config
+git config --unset --<scope> user.name
+e.g. git config --unset --global user.name
+
+//List configs
+git config --list //list all configs
+
+//List configs in a scope
+git config <scope>  --list // Scope is local, global or system
+e.g. git config --local  --list // List all configs in the local scope
+ 
+
 Alias:
   git config alias.st status
   git config alias.lg "log --pretty=oneline --graph --decorate --all"
