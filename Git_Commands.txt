@@ -35,6 +35,11 @@ Alias:
   git log --oneline --decorate --all --graph
   git remote show origin (Find the remote repository URLs)
   
+Search:
+  git log --grep Heartbeat --oneline --all // Search commit messagesfor Heartbeat.
+  git log --grep Heartbeat -i --oneline --all // Search commit messages for Heartbeat. ignore case.
+  git log -Sclobheartbeat -- /a/b  // (Pickaxe search) Search commit contents for clobheartbeat in folder /a/b.
+  
 Finding changes:
   git merge-base <ref>
   git rev-parse <ref>
