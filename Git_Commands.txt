@@ -155,6 +155,7 @@ Delete remote tags:
   
 Push tag to remote:
   git push origin tagname
+  git push origin tag_a //Push just tag_a to origin
   
 Rename tag:
   git tag new old
