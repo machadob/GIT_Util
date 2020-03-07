@@ -3,6 +3,15 @@ Git configuration:
 vi ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
+Managing Credentials on windows:
+Open the windows credential manager (search for credential manager)
+Update the password.
+If you need to add a new entry run the git command:
+git config --global credential.helper manager
+After running the command do a git clone, fetch or pull and you will be prompted for a new password.
+To manually create an entry, use the following format for the URL:
+git:https://user@machine
+
 To ignore a folder, add the following line to the .gitignore file:
 node_modules/  //This will ignore the folder node_modules and its contents any where it exists in the source tree.
 
