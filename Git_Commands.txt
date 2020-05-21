@@ -50,6 +50,15 @@ Search:
   git log -Shello -- /a/b  // (Pickaxe search) Search commit contents for hello in folder /a/b.
   git log -i -Shello -- /a/b  // (Pickaxe search) Search commit contents for hello in folder /a/b. ignore case.
   
+Restoring files:
+ git restore .   //Restore all file in the current directory.
+ git restore --staged test.java // Restore index to match HEAD.
+ git restore --source=HEAD --staged --worktree test.java // Restore test.java to index and working tree from HEAD.
+ git restore --source=HEAD~2 --staged --worktree test.java // Restore test.java to index and working tree from HEAD~2
+ git restore '*.java' // Restore all java files to match the version in the index
+ git restore :/ // Restore working tree.
+ git restore --source master~4 test.java // Restore test.java to 4 revisions back
+  
 Finding changes:
   git merge-base <ref>
   git rev-parse <ref>
