@@ -49,13 +49,12 @@ Search:
   git log --grep Hello -i --oneline --all // Search commit messages for Hello. ignore case.
   git log -Shello -- /a/b  // (Pickaxe search) Search commit contents for hello in folder /a/b.
   git log -i -Shello -- /a/b  // (Pickaxe search) Search commit contents for hello in folder /a/b. ignore case.
-  git grep <regular expression> $(git rev-list --all) // Search content.
   git rev-list --all | xargs git grep <regular expression> // Search content alternate way.
   git grep <regular expression> // Search working tree.
   git grep -e <regular expression> [--or] -e <regular expression> // Search working tree with more than one reg ex.
   git grep <regular expression> $(git rev-list --all) // Search all commits withe reg ex.
   git log --follow -- filename. //List all commits that changed a particular file.
-  git log --diff-filter=A -- my.txt // Find when a file was first added. - --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]] for first Added,Copied, Deleted etc.
+  git log --diff-filter=A -- my.txt // Find when a file was first added. : --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]] for first Added,Copied, Deleted etc.
   git log my.java // Find the last commit that modified a file.
   git diff-tree --no-commit-id --name-only -r 8a31173bc // List all files in a commit. 
   git log --all -- path // List all commits for a file.
