@@ -140,14 +140,6 @@ Common Workflow:
   git push <remote_name> --delete <branch_name> (Delete remote branch e.g. git push origin --delete crazy-experiment)
   git rebase master // Rebase the current branch onto master
   
-  git stash
-  git stash save "stash name"
-  git stash list
-  git stash pop
-  git stash apply
-  git stash apply stash@{2}
-  git stash drop stash@{2}
-  
   git difftool (Launch the git diff tool)
   git diff myfile.txt (Diff file in working dir and repo)
   git diff --cached myfile.txt (Diff file in staging and repo)
@@ -176,6 +168,7 @@ Stash:
   git stash pop
   git stash apply
   git stash apply stash@{2}
+  git stash drop stash@{2}
 
 Delete remote tags:
   git push --delete origin tagname
